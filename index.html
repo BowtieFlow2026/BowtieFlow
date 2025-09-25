@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎀</text></svg>">
+    <title>Jenga</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="mobile-warning">
+        For the best experience, it's better to use a desktop computer to view this website.
+        <br>
+        <button onclick="dismissWarning()">Continue</button>
+    </div>
+    
+    <div class="sidebar">
+        <h2 class="sidebar-title">bowtie-flow 🎀 </h2>
+        
+            <ul>
+                <li><a href="index.html#showcases" class="nav-link"><i class="fas fa-video"></i> Show Cases on 1080P </a></li>
+                <li><a href="index.html#showcases" class="nav-link"><i class="fas fa-video"></i> Show Cases on 720P </a></li>
+                <li><a href="index.html#compare" class="nav-link"><i class="fas fa-trophy"></i> Comparisons </a></li>
+                <li><a href="index.html#ablations" class="nav-link"><i class="fas fa-comments"></i> Ablations & Limitations </a></li>
+                <li><a href="index.html#contact-us" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+            </ul>
+        
+    </div>
+    <div class="content">
+        <div id="paper-info" class="paper-info">
+            <h1>bowtie-Flow: Prior-preserving Efficient High-Resolution Video Generation</h1>
+            <h2>Please stay tuned for all video loading...</h2>
+            <!-- <div class="authors"> -->
+                <!-- <p>
+                    <span class="author"><a href="https://julianjuaner.github.io/" target="_blank">Yuechen Zhang<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://doubiiu.github.io/" target="_blank">Jinbo Xing<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://zj-binxia.github.io/" target="_blank">Bin Xia<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://www.shaotengliu.com/" target="_blank">Shaoteng Liu<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://pbihao.github.io" target="_blank">Bohao Peng<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://www.xtao.website/" target="_blank"> Xin Tao<sup>4</sup></a></span>, 
+                    <span class="author"><a href="index.html" target="_blank"> Pengfei Wan<sup>4</sup></a></span>, 
+                    <span class="author"><a href="index.html" target="_blank">Eric Lo<sup>1</sup></a></span>, 
+                    <span class="author"><a href="https://jiaya.me/" target="_blank">Jiaya Jia<sup>2,3</sup></a></span>
+                </p>
+                <p>
+                    <span class="affiliation"><sup>1</sup> CUHK</span>, 
+                    <span class="affiliation"><sup>2</sup> HKUST</span>,
+                    <span class="affiliation"><sup>3</sup> SmartMore</span>,
+                    <span class="affiliation"><sup>4</sup> Kuaishou Technology</span>
+                </p> -->
+            <!-- </div> -->
+            <!-- <div class="links">
+                <p><a href="https://arxiv.org/pdf/2505.16864" target="_blank">Paper (Arxiv)</a></p>
+                <p><a href="https://github.com/dvlab-research/Jenga/" target="_blank">GitHub</a></p>
+            </div> -->
+           
+        
+        <section id="Showcases of 720P" class="gallery-section">
+            <h2>Show Cases on 1080P</h2>
+            <h3>Hover on the video to see corresponding text prompts</h3>
+            <div class="gallery-60">
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A beautiful coastal beach in spring, waves lapping on sand by Hokusai, in the style of Ukiyo</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A corgi's head depicted as an explosion of a nebula</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A cute fluffy panda eating Chinese food in a restaurant_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A cute happy Corgi playing in park, sunset, in super slow motion_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/6.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A panda drinking coffee in a cafe in Paris, zoom out_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/7.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A person is baby waking up_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/8.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A person is bending back_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/9.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A person is clay pottery making_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/10.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A person is crawling baby_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/11.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A person is cutting watermelon_video</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/12.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">a toaster</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/13.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A koala bear playing piano in the forest</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/14.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A cute happy Corgi playing in park, sunset, watercolor painting</div>
+                </div>
+
+                <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/15.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A girl twirling in the starry night sky, her costume shimmering with pastel colors, feathers floating around, rendered in a dreamy magical anime illustration.</div>
+                </div>
+
+                 <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/16.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A young girl dancing joyfully in the clouds, magical staff glowing, surrounded by rainbow-colored sparkles, illustrated in a detailed Cardcaptor Sakura-inspired style.</div>
+                </div>
+
+                 <div class="gallery-item" style=" --aspect-ratio: 1 / 1; grid-column: span 14; grid-row: span 18;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/1440_1440/17.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay">A lively Pikachu dancing in a field of glowing mushrooms at night, soft bioluminescent lights reflecting on its yellow fur, tiny sparks of electricity in the air, captured in a whimsical, fantasy-inspired watercolor style.</div>
+                </div>
+                
+            </div>  
+        
+            </section>
+
+        <section id="showcases" class="gallery-section">
+            <h2>Show Cases on 720P</h2>
+            <h3>Hover on the video to see corresponding text prompts</h3>
+            <div class="gallery-48"> 
+                <!-- gallery-48 是根据css中定义来的 -->
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A colossal space shuttle stands poised on the launch pad, its sleek, white exterior gleaming under the clear blue sky. As the countdown reaches zero, the engines ignite with a thunderous roar, sending vibrant orange flames and thick plumes of white smoke billowing out from the base. The shuttle begins its ascent, slowly at first, then rapidly gaining speed, piercing through the atmosphere. The camera captures close-up details of the fiery exhaust and the intricate patterns of smoke swirling around the launch pad. As the shuttle climbs higher, the sky transitions from blue to the inky blackness of space, with the Earth’s curvature visible below, marking the shuttle's triumphant journey into orbit.
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A couple stands in a picturesque park during autumn, surrounded by vibrant, fallen leaves. The man, wearing a cozy brown sweater and jeans, gently holds the woman's face, who is dressed in a flowing red scarf and a beige coat. Their eyes close as they share a tender kiss, the golden sunlight filtering through the trees casting a warm glow on their faces. The camera captures the intimate moment from various angles, highlighting the emotion and connection between them. The background features a serene lake and distant mountains, enhancing the romantic atmosphere.
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A determined individual in a sleek black tank top and gray athletic shorts performs push-ups on a pristine wooden floor in a minimalist, sunlit room. The camera captures the sweat glistening on their forehead, emphasizing their intense focus and dedication. As they lower themselves, the muscles in their arms and back ripple with effort, showcasing their strength and endurance. The room's large windows allow beams of natural light to highlight their form, casting dynamic shadows that accentuate each movement. The serene ambiance of the space contrasts with the vigorous exercise, creating a powerful visual of discipline and perseverance.
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A determined individual, dressed in a red flannel shirt, blue jeans, and sturdy boots, pushes a weathered wooden cart along a narrow, cobblestone street. The scene is set in a quaint, old-world village with charming stone buildings and ivy-covered walls. The cart, filled with an assortment of colorful fruits and vegetables, creaks slightly as it moves. The person’s face, partially obscured by a wide-brimmed hat, shows a mix of focus and determination. As they push the cart, the early morning sun casts long shadows, adding a golden hue to the scene, while birds chirp softly in the background, enhancing the serene atmosphere.
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/5.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A focused individual grips the steering wheel of a sleek, modern car, the dashboard illuminated by soft, ambient lighting. The camera captures the driver's profile, revealing a calm expression and a pair of stylish sunglasses. Outside the window, a picturesque landscape of rolling hills and a setting sun unfolds, casting a golden glow over the scene. The interior of the car is luxurious, with leather seats and a state-of-the-art infotainment system. As the car glides smoothly along the winding road, the driver occasionally glances at the rearview mirror, reflecting a serene, empty highway behind. The journey exudes a sense of freedom and tranquility, with the gentle hum of the engine providing a soothing soundtrack.
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/6.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A focused individual, wearing a dark apron over a white shirt, stands at a rustic wooden workbench in a dimly lit workshop. The scene begins with a close-up of their hands, skillfully holding a knife against a whetstone, the rhythmic sound of sharpening filling the air. The camera then pans to reveal their concentrated expression, illuminated by a single overhead light, casting dramatic shadows. Sparks fly as they switch to a grinding wheel, the intensity of their craft evident in their precise movements. The final shot captures the person inspecting the blade's edge, the gleaming knife reflecting the warm, ambient light of the workshop.
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/7.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A person with a focused expression stands at a rustic wooden table, wearing a white apron over a casual outfit. They carefully slice a large, ripe watermelon, the vibrant red flesh contrasting with the green rind. The scene captures the juicy fruit's freshness, with close-up shots of the knife gliding through the watermelon, revealing its succulent interior. The person's hands, steady and precise, handle the fruit with care, creating perfect, mouth-watering slices. The background features a sunlit kitchen with potted herbs on the windowsill, adding a homely, inviting atmosphere to the scene.
+                    </div>
+                </div>
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/8.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A person stands at a kitchen sink, wearing a cozy, oversized sweater and rubber gloves, surrounded by a warm, inviting kitchen. Sunlight streams through a nearby window, casting a golden glow on the scene. The person carefully scrubs a plate, their movements methodical and soothing. The camera captures the gentle swirls of soap bubbles and the clinking of dishes. Nearby, a vase of fresh flowers adds a touch of color and life to the countertop. The person pauses to look out the window, taking a moment to enjoy the peaceful view of a blooming garden before returning to their task with a contented smile.
+                    </div>
+                </div>
+
+
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/720_1280/9.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">bowtie / 249s</div>
+                    <div class="prompt-overlay">
+                        A bustling freeway at night, illuminated by a cascade of headlights and taillights, creates a mesmerizing river of light. The camera captures the scene from an elevated angle, showcasing the intricate dance of vehicles weaving through lanes. The city skyline in the background glows with the soft, ambient light of skyscrapers, while the freeway itself is framed by streetlights casting a warm, golden hue. Occasional flashes of neon signs and billboards add vibrant splashes of color to the scene. The rhythmic flow of traffic, combined with the distant hum of engines, paints a dynamic yet serene picture of urban life after dark.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compare" class="gallery-section">
+            <h2>Comparisons</h2>
+            <h3 style="text-align: center; color: #1c170e; font-weight: bolder;">Simple Guess Game: Guess which of the following three pairs of video generation processes takes less time? (hover on the video to see the result)</h3>
+            <h3 class="prompt">
+                <span class="prompt-highlight">A dry rainbow rose is coming back to life.</span>
+            </h3>
+            <div class="gallery-32">
+                <!-- Pair 1 -->
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_left_videos/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by HunyuanVideo (1625s, 27min 5s)</div>
+                    <div class="resolution">Left Video</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_right_videos/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by Jenga-Base (347s, 5min 47s, 4.68× faster)</div>
+                    <div class="resolution">Right Video</div>
+                </div>
+            </div>
+            <br/>
+            <!-- Pair 4 -->
+            <h3 class="prompt">
+                <span class="prompt-highlight">A skilled artisan shapes clay into a beautiful vase.</span>
+            </h3>
+            <div class="gallery-32">
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_left_videos/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by HunyuanVideo (1625s, 27min 5s)</div>
+                    <div class="resolution">Left Video</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_right_videos/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by Jenga-Base (347s, 5min 47s, 4.68× faster)</div>
+                    <div class="resolution">Right Video</div>
+                </div>
+            </div>
+            <br/>
+                <!-- Pair 9 -->
+            <h3 class="prompt">
+                <span class="prompt-highlight">A person is eating an ice cream in a cozy sunny setting.</span>
+            </h3>
+            <div class="gallery-32">
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_left_videos/9.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by HunyuanVideo (1625s, 27min 5s)</div>
+                    <div class="resolution">Left Video</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_right_videos/9.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by Jenga-Base (347s, 5min 47s, 4.68× faster)</div>
+                    <div class="resolution">Right Video</div>
+                </div>
+            </div>
+            <br/>
+
+                <!-- Pair 16 -->
+            <h3 class="prompt">
+                <span class="prompt-highlight">A jetski moves quickly through a narrow rocky channel.</span>
+            </h3>
+            <div class="gallery-32">
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_left_videos/16.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by HunyuanVideo (1625s, 27min 5s)</div>
+                    <div class="resolution">Left Video</div>
+                </div>
+                <div class="gallery-item" style=" --aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compare_right_videos/16.mp4" type="video/mp4">
+                    </video>
+                    <div class="prompt-overlay-large">This video is generated by Jenga-Base (347s, 5min 47s, 4.68× faster)</div>
+                    <div class="resolution">Right Video</div>
+                </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <h2>Comparison with other methods</h2>
+
+                <!-- Case 1 -->
+                <h3 class="prompt">
+                    <span class="prompt-highlight">A serene individual, dressed in a flowing white blouse and light blue jeans, stands at a rustic wooden table in a sunlit room filled with greenery. They carefully select vibrant blooms from a wicker basket, including roses, lilies, and daisies, and begin arranging them in a crystal vase. The sunlight filters through the window, casting a warm glow on their focused expression. As they work, their hands move gracefully, adjusting stems and leaves to create a harmonious bouquet. The scene transitions to a close-up of their hands tying a delicate ribbon around the vase, completing the arrangement with a touch of elegance. The final shot captures the person stepping back to admire their creation, a satisfied smile on their face, with the room’s natural beauty enhancing the tranquil atmosphere.</span>
+                </h3>
+                <div class="gallery-48">
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan480P/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">Wan480P / 1.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan720P/30%/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">30% / 1.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan720P/50%/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">50% / 1.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/DMD/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">DMD / 1.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/SVG/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">SVG / 1.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/ours/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">Ours / 1.mp4</div>
+                    </div>
+                </div>
+                <br/>
+
+                <!-- Case 2 -->
+                <h3 class="prompt">
+                    <span class="prompt-highlight">A llama sits in a cozy reading nook, surrounded by plush pillows and soft blankets. Warm, golden lighting from a floor lamp creates a welcoming atmosphere. The llama reads a picture book aloud, using expressive voices for the characters. The camera captures the llama’s animated face and the illustrations in the book.</span>
+                </h3>
+                <div class="gallery-48">
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan480P/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">Wan480P / 2.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan720P/30%/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">30% / 2.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan720P/50%/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">50% / 2.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/DMD/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">DMD / 2.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/SVG/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">SVG / 2.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/ours/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">Ours / 2.mp4</div>
+                    </div>
+                </div>
+                <br/>
+
+                <!-- Case 3
+                <h3 class="prompt">
+                    <span class="prompt-highlight">A breathtaking time-lapse captures the sun setting over a tranquil beach, where the sky transforms from a soft orange to deep purples and pinks. Wispy clouds drift gracefully across the horizon, reflecting the changing hues of the sky. The golden sun slowly dips below the water, casting a shimmering path of light on the gentle waves. Silhouettes of distant sailboats and palm trees add to the serene ambiance. As the sky darkens, stars begin to twinkle, and the last remnants of daylight fade, leaving a peaceful, starlit night over the calm, rhythmic ocean.</span>
+                </h3> -->
+                <div class="gallery-48">
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan480P/3.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">Wan480P / 3.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan720P/30%/3.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">30% / 3.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/Wan720P/50%/3.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">50% / 3.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/DMD/3.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">DMD / 3.mp4</div>
+                    </div>
+                     <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/SVG/3.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">SVG / 3.mp4</div>
+                    </div>
+                    <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                        <video class="gallery-video" loop muted autoplay>
+                            <source src="assets/MoreVisualResults/ours/3.mp4" type="video/mp4">
+                        </video>
+                        <div class="resolution">Ours / 3.mp4</div>
+                    </div>
+            </div>
+                    <!-- Case 4 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A paint roller applies a coat of beige paint to a textured wall, showing the paint filling in the textures.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/4.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/4.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/4.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/4.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/4.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/4.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- Case 5 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A towering Bigfoot trudges through a fierce snowstorm, its massive, fur-covered form barely visible against the swirling white. The creature’s powerful strides leave deep footprints in the snow, each step echoing its immense weight and strength. Snow clings to its thick, matted fur, and its eyes, glowing faintly, peer through the blizzard with an almost human-like intensity. The wind howls around it, whipping up flurries that obscure its path, but Bigfoot moves with purpose, undeterred by the harsh elements. The scene captures the raw, untamed wilderness, with the mythical creature embodying the mystery and majesty of nature’s most elusive legends.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/5.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/5.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/5.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/5.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/5.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/5.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- Case 6 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A tranquil Zen garden with a gently flowing stream and koi fish.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/6.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/6.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/6.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/6.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/6.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/6.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- Case 7 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A young woman with short, curly hair stands in a modern, well-lit bathroom, wearing a white bathrobe. She looks into the mirror with a focused expression, holding a blue toothbrush. As she begins brushing her teeth, the camera captures the rhythmic motion of her hand and the foamy toothpaste. The scene shifts to a close-up of her mouth, showing the thorough brushing of each tooth. The background features sleek, minimalist decor with a potted plant on the counter. Finally, she rinses her mouth with water, her face reflecting a sense of freshness and readiness for the day ahead.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/7.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/7.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/7.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/7.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/7.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/7.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- Case 8 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A high-speed video of a splash created by a stone thrown into a pond.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/8.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/8.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/8.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/8.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/8.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/8.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- Case 9 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A cute furry monster is blowing on hot cocoa to cool it down.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/9.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/9.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/9.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/9.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/9.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/9.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- Case 10 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A bearded man in his thirties, wearing a plaid shirt and jeans, sits at a rustic wooden bar, surrounded by an array of beer taps and vintage brewery decor. He carefully lifts a frosty pint glass filled with amber beer, examining its color and clarity against the warm, ambient lighting. He takes a slow, appreciative sip, his eyes closing momentarily as he savors the complex flavors. The camera captures the subtle smile of satisfaction on his face, highlighting the rich foam on his upper lip. The background hum of soft chatter and clinking glasses adds to the cozy, inviting atmosphere of the pub.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/10.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/10.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/10.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/10.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/10.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/10.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <!-- Case 11 -->
+                    <h3 class="prompt">
+                        <span class="prompt-highlight">A focused artist, wearing a cozy gray sweater, sits at a wooden desk in a warmly lit room, surrounded by art supplies. The camera zooms in on their hands, skillfully sketching intricate details on a large canvas with a fine-tipped pen. The scene shifts to show the artist’s concentrated face, glasses perched on their nose, as they meticulously add shading to the drawing. The room’s ambiance, filled with soft light from a nearby window and the gentle hum of background music, enhances the creative atmosphere. Finally, the artist steps back, revealing a stunning, detailed illustration of a serene forest landscape.</span>
+                    </h3>
+                    <div class="gallery-48">
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan480P/11.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Wan480P</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/30%/11.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">30%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/Wan720P/50%/11.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">50%</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/DMD/11.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">DMD</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/SVG/11.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">SVG</div>
+                        </div>
+                        <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                            <video class="gallery-video" loop muted autoplay>
+                                <source src="assets/MoreVisualResults/ours/11.mp4" type="video/mp4">
+                            </video>
+                            <div class="resolution">Ours</div>
+                        </div>
+                    </div>
+            <br/>
+
+            <h2>More Compared Cases on 720P</h2>
+            <h3 class="prompt">
+                <span class="prompt-highlight">In a whimsical and playful scene, a fluffy white cat sits in the driver's seat of a sleek black car, curiously exploring the city streets.</span>
+            </h3>
+            <div class="gallery-48">
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/lr_video/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">LR Video / 1.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/RealBasicVSR/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">RealBasicVSR / 1.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/VEnhancer/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">VEnhancer / 1.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/STAR/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">STAR / 1.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/Upscale-A-Video/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Upscale-A-Video / 1.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/ours/1.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Ours / 1.mp4</div>
+                </div>
+            </div>
+            <br/>
+
+            <!-- Case 2 -->
+            <h3 class="prompt">
+                <span class="prompt-highlight">A lively corgi struts along a tropical island beach, wearing blue sunglasses, enjoying the rhythmic waves and sunlight.</span>
+            </h3>
+            <div class="gallery-48">
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/lr_video/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">LR Video / 2.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/RealBasicVSR/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">RealBasicVSR / 2.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/VEnhancer/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">VEnhancer / 2.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/STAR/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">STAR / 2.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/Upscale-A-Video/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Upscale-A-Video / 2.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/ours/2.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Ours / 2.mp4</div>
+                </div>
+            </div>
+            <br/>
+
+            <!-- Case 3 -->
+            <h3 class="prompt">
+                <span class="prompt-highlight">A drone zips through a volcano crater, weaving between molten lava rivers and glowing jagged rocks, capturing thrilling aerial views.</span>
+            </h3>
+            <div class="gallery-48">
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/lr_video/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">LR Video / 3.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/RealBasicVSR/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">RealBasicVSR / 3.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/VEnhancer/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">VEnhancer / 3.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/STAR/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">STAR / 3.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/Upscale-A-Video/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Upscale-A-Video / 3.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/ours/3.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Ours / 3.mp4</div>
+                </div>
+            </div>
+            <br/>
+
+            <!-- Case 4 -->
+            <h3 class="prompt">
+                <span class="prompt-highlight">A young woman enjoys a juicy slice of watermelon on a sunlit garden bench, surrounded by vibrant flowers and greenery.</span>
+            </h3>
+            <div class="gallery-48">
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/lr_video/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">LR Video / 4.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/RealBasicVSR/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">RealBasicVSR / 4.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/VEnhancer/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">VEnhancer / 4.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/STAR/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">STAR / 4.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/Upscale-A-Video/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Upscale-A-Video / 4.mp4</div>
+                </div>
+                <div class="gallery-item" style="--aspect-ratio: 16 / 9; grid-column: span 16; grid-row: span 9;">
+                    <video class="gallery-video" loop muted autoplay>
+                        <source src="assets/compareVSR/ours/4.mp4" type="video/mp4">
+                    </video>
+                    <div class="resolution">Ours / 4.mp4</div>
+                </div>
+            </div>
+            <br/>
+
+        </section>
+
+
+    </div>
+
+   <!-- Modal for image enlargement -->
+    <script src="script.js"></script>
+        <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const videos = document.querySelectorAll(".gallery-video");
+        let loaded = 0;
+
+        // 等待所有视频加载好
+        videos.forEach(video => {
+            video.oncanplaythrough = () => {
+                loaded++;
+                if (loaded === videos.length) {
+                    // 全部准备好后，从头同时播放
+                    videos.forEach(v => {
+                        v.currentTime = 0;
+                        v.play();
+                    });
+                }
+            };
+        });
+    });
+    </script>
+</body>
+</html>
